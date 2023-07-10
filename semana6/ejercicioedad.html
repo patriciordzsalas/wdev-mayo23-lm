@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Edad</title>
+  <title>Ejercicio Comparar Edad</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,20 +40,25 @@
                     </div>
                 </div>
                 <script>
+
                     function resultado(){
 
-                        Edad = Number(document.getElementById("Edad").value);
-                        document.getElementById("soyresultado").innerHTML = Edad;
+                        var Edad = Number(document.getElementById("Edad").value);
+                        
+                        if(Edad < 65)
+                            document.getElementById("soyresultado").innerHTML = "Edad menor a 65 años";
 
+                        else
+                            document.getElementById("soyresultado").innerHTML = Edad + " " +"En rango";
+                        
+                        
                     }
 
-                    if(Edad <= 65){
-                        Edad = Number(document.getElementById("Edad").value);
-                        document.getElementById("soyresultado").innerHTML = Edad;
-                        document.getElementById("Edad").innerHTML = Edad + "Es menor a 65 anios"
-                    }else
-                        document.getElementById("Edad").innerHTML = Edad 
+
+                       
                 </script>
+
+
             </main>
         </div>
         <div class="container">
