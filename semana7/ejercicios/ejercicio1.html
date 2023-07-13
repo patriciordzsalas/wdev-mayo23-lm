@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 1 JavaScript</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container-md">
+    <div class="container">
+        <header>
+          <h1>Inversion de 100 000</h1>
+          <div class="card">
+            <div class="card-header">
+              Calculadora de Ganacia de Inversion
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" id="Resultado"><span>Resultado</span></h5>
+              <p class="card-text">Ganancia mensual</p>
+              <a href="#" class="btn btn-primary" onclick="calculo()">Calcular</a>
+            </div>
+          </div>
+        </header>
+    </div>
+    <div class="container">
+        <main>
+          <br>
+          <div class="card">
+            <div class="card-body">
+              <span id="soydesarrollo">Inversion 100 000 <br> 70 000 al 5% mensual<br> 30 000 al 10% mensual
+              </span>
+            </div>
+          </div>
+        </main>
+    </div>
+    <div class="container">
+        <footer>
+          <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-muted">2023 WDEV-MAYO23-LM, VLA</p>
+            </footer>
+          </div>
+        </footer>
+    </div>
+  </div>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+
+    //Una persona tiene $100.000 y decide invertir $70.000
+    //en bonos hipotecarios a un 5% (mensual)
+    //y el resto en un depósito a plazo a 10% (mensual).
+    //¿Cuánto dinero ganará esta persona después de un mes? 6500
+
+    
+
+    function calculo() {
+      var cincoporciento = 5/100;
+      var inversion1 = 70000 * cincoporciento; // ==3500
+
+      var diezporciento = 10/100;
+      var inversion2 = 30000 * diezporciento; // ==3000
+      var mes = inversion1 + inversion2;
+
+      document.getElementById("Resultado").innerHTML = mes;
+    
+
+    }
+    
+  </script>
+</body>
+
+</html>

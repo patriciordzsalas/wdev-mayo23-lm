@@ -1,0 +1,35 @@
+<script>
+    // Usted va a hacer compras por 12000 colones en un comercio
+    // y el vendedor le ofrece un descuento de 1000 colones,
+    // demuestre como sería más barato el precio final,
+    // si primero le aplican el descuento y
+    // luego le cobran el 13% de impuesto o que primero
+    // le carguen el 13% de impuesto y
+    // luego le hagan el descuento.
+
+    // descuento menos impuesto
+
+    var precio = 12000;
+    var descuentototal = 1000;
+
+    var preciocondesc = precio - descuentototal;
+        console.log(preciocondesc);
+
+    var treceporciento = 13/100;
+    var impuesto = preciocondesc * treceporciento;
+    var precioconimp = preciocondesc + impuesto;
+
+        alert (precioconimp);
+
+
+    // impuesto menos descuento
+    var impuestoprimero = precio * treceporciento
+    var calcalrevez = precio + impuestoprimero;
+        alert (calcalrevez);
+
+
+    
+
+
+
+</script>
