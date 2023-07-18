@@ -86,21 +86,21 @@
     // determine el mayor valor e imprima el mayor
     // valor con un mensaje de identificación.
 
-    function Comparar(){ 
+    function Comparar() { 
     
         var dato1 = Number(document.getElementById("input1").value);  
         var dato2 = Number(document.getElementById("input2").value);
 
 
-        if (dato1 > dato2)
+        if (dato1 > dato2){
+          console.log(dato1);
+          document.getElementById("mayor").innerHTML = dato1 + "Es mayor";
 
-            console.log(dato1);
-            document.getElementById("mayor").innerHTML = dato1 + "Es mayor";
+        }else{
+          console.log(dato2);
+          document.getElementById("mayor").innerHTML = dato2 + "Es mayor";
+        }
 
-        else (dato1 < dato2)
-
-            console.log(dato2);
-            document.getElementById("mayor").innerHTML = dato2 + "Es mayor";
 
     }   
 
