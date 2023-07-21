@@ -8,5 +8,14 @@
 //#cuantos inputs? 3
 //#resultado 15400 ??? no tiene el iva, y no tiene el descuento.
 //#resultado - descuennto, al final se le aplica el iva
+    var precio = 1000
+    var impuesto = 13/100
+    var descuento = 10/100
+
+    var preciocondesc = precio - (precio*descuento)
+    var precioconimp = preciocondesc + (preciocondesc*impuesto)
+
+    alert(precioconimp);
+
 
 </script>

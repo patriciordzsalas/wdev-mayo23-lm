@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 4 JavaScript</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-md">
+        <div class="container">
+            <header>
+                <form action="">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Precio del articulo</label>
+                      <input type="number"
+                        class="form-control" name="precio" id="precio" aria-describedby="helpId" placeholder="Precio del articulo">
+                      <small id="helpId" class="form-text text-muted">Inserte el precio</small>
+                    </div>
+                </form>
+            </header>
+        </div>
+        <div class="container">
+            <main>
+                <div class="card">
+                    <h5 class="card-header">Precio final</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Precio con 10% descuento e IVA incluidos</h5>
+                      <p class="card-text"><span id="total">---</span></p>
+                      <a href="#" class="btn btn-primary" onclick="Calcular()">Calcular precio</a>
+                    </div>
+                  </div>
+            </main>
+        </div>
+        <div class="container">
+            <footer>
+                <div class="container">
+                    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                      <div class="col-md-4 d-flex align-items-center">
+                        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                        </a>
+                        <span class="mb-3 mb-md-0 text-muted">2023 WDEV-MAYO23-LM, VLA</span>
+                      </div>
+                    </footer>
+                  </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Escriba un algoritmo que lea los siguientes valores:
+        // precio, impuesto y descuento,
+        // y calcule el valor total de la factura.
+    
+    
+    
+    //#cuantos inputs? 3
+    //#resultado 15400 ??? no tiene el iva, y no tiene el descuento.
+    //#resultado - descuennto, al final se le aplica el iva
+        
+        function Calcular(){
+
+            var precio = Number(document.getElementById("precio").value);
+            var impuesto = 13/100
+            var descuento = 10/100
+    
+            var preciocondesc = precio - (precio*descuento)
+            var precioconimp = preciocondesc + (preciocondesc*impuesto)
+    
+                console.log(precioconimp);
+                document.getElementById("total").innerHTML = precioconimp;
+        
+            
+
+        }
+
+    
+    </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
