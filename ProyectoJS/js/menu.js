@@ -18,6 +18,7 @@ menuprincipal.innerHTML += `
                 <a class="dropdown-item" href="listarusuarios.html">ListarUsuarios</a>
                 <a class="dropdown-item" href="listarestudiantesgrupo.html">ListarEstudiantesGrupo</a>
                 <a class="dropdown-item" href="listarprofesoresgrupo.html">ListarProfesoresGrupo</a>
+                <a class="dropdown-item" href="crearcurso.html">CrearCurso</a>
             </div>
         </li>
     </ul>
