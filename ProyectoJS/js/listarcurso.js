@@ -1,9 +1,11 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apiconsultar = "ListaCurso.php";
 var apieliminar = "BorrarCursos.php";
+var apieditar = "ActualizarCursos.php"
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -93,6 +95,46 @@ function mostrarEditarModal(id,nombre,descripcion,tiempo){
     document.getElementById("tiempo").value = tiempo;
 
     myModalEditar.show();
+}
+//crear una funcion parecida a la del submit
+//cambiar el metodo de insertar por el de editar
+//crear una funcion similar a completeDelete
+
+formulario.addEventListener('submit', function(e)
+{
+    e.preventDefault();
+    //alert('salvando');
+
+    var datosEditar = { 
+        "id":document.getElementById('id').value ,
+        "nombre":document.getElementById('nombre').value ,
+        "descripcion":document.getElementById('descripcion').value ,
+        "tiempo":document.getElementById('tiempo').value ,
+        "usuario":"Patricio Rdz"
+    }
+
+    console.log(datosEditar)
+    apiurl = apibase + apieditar ;
+    fetch(apiurl,
+        {
+            method:'POST',
+            body: JSON.stringify(datosEditar)
+        })
+    .then(estructura => estructura.json())
+    .then((datosrespuesta) => {
+        //alert("Salvado")
+            modalSuccess.show()
+             completeEdit()
+        })
+    .catch(console.log);
+
+   
+});
+
+function completeEdit(){
+    myModalEditar.hide();
+    tablaresultado.innerHTML = ``;
+    consultardatos();
 }
 
 consultardatos();
