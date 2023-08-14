@@ -53,7 +53,7 @@
             </table>
           </div>
         </div>
-       
+        <!-- Modal Eliminar -->
         <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
         <div class="modal fade" id="myModalEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
@@ -67,6 +67,47 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Modal Editar -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="myModalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Editar registro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="formulario">
+                  <div class="mb-3">
+                    <label for="" class="form-label">Id</label>
+                    <input required type="text" disabled
+                      class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Id</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Nombre</label>
+                    <input required type="text"
+                      class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+                    <small id="helpId" class="form-text text-muted">Nombre</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Descripcion</label>
+                    <input required type="text"
+                        class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion">
+                    <small id="helpId" class="form-text text-muted">Descripcion</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Tiempo</label>
+                    <input required type="text"
+                        class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo">
+                    <small id="helpId" class="form-text text-muted">Tiempo</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
               </div>
             </div>
           </div>
