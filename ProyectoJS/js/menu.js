@@ -10,16 +10,16 @@ menuprincipal.innerHTML += `
             <a class="nav-link active" href="https://paginas-web-cr.com/ApiPHP" target="blank" aria-current="page">API <span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Estudiantes<span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="listarestudiantes.html" aria-current="page">Estudiantes<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Profesores<span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="listarprofesores.html" aria-current="page">Profesores<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Grupos<span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="listargrupo.html" aria-current="page">Grupos<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Cursos<span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos<span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
@@ -28,9 +28,6 @@ menuprincipal.innerHTML += `
                 <a class="dropdown-item" href="listarprofesores.html">ListarProfesores</a>
                 <a class="dropdown-item" href="listarcurso.html">ListarCurso</a>
                 <a class="dropdown-item" href="listargrupo.html">ListarGrupo</a>
-                <a class="dropdown-item" href="listarusuarios.html">ListarUsuarios</a>
-                <a class="dropdown-item" href="listarestudiantesgrupo.html">ListarEstudiantesGrupo</a>
-                <a class="dropdown-item" href="listarprofesoresgrupo.html">ListarProfesoresGrupo</a>
                 
             </div>
         </li>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Listar Curso</title>
+  <title>Listar Grupo</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="container-md">
+  <div class="container">
     <div class="container">
       <header>
         <div id="menuprincipal">
@@ -35,15 +35,12 @@
               <thead class="table-light">
                   <caption>Lista de datos</caption>
                   <tr>
-                  <th>ID</th>
+                  <th>Id</th>
                   <th>Nombre</th>
-                  <th>Descripcion</th>
-                  <th>Tiempo</th>
-                  <th>Usuario</th>
                   <th>Acciones</th>
                   </tr>
                 </thead>
-                <tbody class="table-group-divider" id="tablaresultado">
+                <tbody class="table-group-divider" id="tablaresultadoGrp">
                   
                   
                 </tbody>
@@ -55,7 +52,7 @@
         </div>
         <!-- Modal Eliminar -->
         <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-        <div class="modal fade" id="myModalEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal fade" id="myModalEliminarGrp" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -73,7 +70,7 @@
         </div>
          <!-- Modal Editar -->
         <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-        <div class="modal fade" id="myModalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal fade" id="myModalEditarGrp" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -81,30 +78,18 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form id="formulario">
+                <form id="formularioGrp">
                   <div class="mb-3">
                     <label for="" class="form-label">Id</label>
-                    <input required type="text" disabled
+                    <input required type="number"
                       class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Id</small>
                   </div>
                   <div class="mb-3">
                     <label for="" class="form-label">Nombre</label>
                     <input required type="text"
-                      class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+                      class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Nombre</small>
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Descripcion</label>
-                    <input required type="text"
-                        class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion">
-                    <small id="helpId" class="form-text text-muted">Descripcion</small>
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Tiempo</label>
-                    <input required type="text"
-                        class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo">
-                    <small id="helpId" class="form-text text-muted">Tiempo</small>
                   </div>
                   <button type="submit" class="btn btn-primary">Enviar</button>
               </form>
@@ -114,7 +99,7 @@
         </div>
                 <!-- Modal Actualizar -->
         <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-        <div class="modal fade" id="modalSuccess" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal fade" id="modalSuccessGrp" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
               <div class="modal-content">
                   <div class="modal-header">
@@ -156,7 +141,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   
-  <script src="js/listarcurso.js"></script>
+  <script src="js/listargrupo.js"></script>
 </body>
 
 </html>
