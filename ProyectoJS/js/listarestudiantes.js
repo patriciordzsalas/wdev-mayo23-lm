@@ -23,9 +23,9 @@ function consultardatosEst(){
     .catch(console.log);
 }
 
-function ajustardatostabla(datos){
-    console.log("datosEst"+datos);
-    for (const objetoindividual of datos) {
+function ajustardatostabla(datosEst){
+    console.log("datosEst"+datosEst);
+    for (const objetoindividual of datosEst) {
                 //{ "cedula" : "8128128", 
                 //"correoelectronico":"marioaje@", 
                 //"telefono":"1212" , 
@@ -57,7 +57,7 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.usuario}</td>
                                 
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalEst('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -70,18 +70,18 @@ function ajustardatostabla(datos){
            
 }
 
-function mostrarModal(cedula){
+function mostrarModal(id){
 
-    eliminandodatoEst(cedula);
+    eliminandodatoEst(id);
 
     myModalEliminarEst.show();
     
 }
 
-function eliminandodatoEst(cedula){
+function eliminandodatoEst(id){
     
     var datosEnviarEst =  { 
-        "cedula":cedula
+        "id":id
         }
     apiurl = apibase + apieliminarEst ;
     fetch(apiurl,
@@ -103,8 +103,22 @@ function completeDeleteEst(){
     consultardatosEst();
     
 }
+//[{"id":"1254",
+//"cedula":"1",
+//"correoelectronico":"test@email.com",
+//"telefono":"5",
+//"telefonocelular":"6",
+//"fechanacimiento":"2023-08-21",
+//"sexo":"Masculino",
+//"direccion":"Casa",
+//"nombre":"Test",
+//"apellidopaterno":"Test1",
+//"apellidomaterno":"Test2",
+//"nacionalidad":"Costa Rica",
+//"idCarreras":"5",
+//"usuario":"Patricio Rdz"},
 
-function mostrarEditarModal(cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,nacionalidad,idCarreras){
+function mostrarEditarModalEst(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,nacionalidad,idCarreras,usuario){
     document.getElementById("cedula").value = cedula;
     document.getElementById("correoelectronico").value = correoelectronico;
     document.getElementById("telefono").value = telefono;
@@ -117,6 +131,7 @@ function mostrarEditarModal(cedula,correoelectronico,telefono,telefonocelular,fe
     document.getElementById("apellidomaterno").value = apellidomaterno;
     document.getElementById("nacionalidad").value = nacionalidad;
     document.getElementById("idCarreras").value = idCarreras;
+
 
     myModalEditarEst.show();
 }

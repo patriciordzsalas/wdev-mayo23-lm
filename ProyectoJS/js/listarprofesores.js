@@ -60,7 +60,7 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.nacionalidad}</td>
                                 
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalProf('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -107,7 +107,7 @@ function completeDeleteProf(){
     
 }
 
-function mostrarEditarModal(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,idCarreras,nacionalidad,){
+function mostrarEditarModalProf(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,idCarreras,usuario,nacionalidad,){
     document.getElementById("id").value = id;
     document.getElementById("cedula").value = cedula;
     document.getElementById("correoelectronico").value = correoelectronico;

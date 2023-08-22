@@ -34,7 +34,7 @@ function ajustardatostablaGrp(datos){
                                 <td scope="row">${objetoindividual.id}</td>
                                 <td>${objetoindividual.nombre}</td>
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalGrp('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -81,7 +81,7 @@ function completeDeleteGrp(){
     
 }
 
-function mostrarEditarModal(id,nombre){
+function mostrarEditarModalGrp(id,nombre){
     document.getElementById("id").value = id;
     document.getElementById("nombre").value = nombre;
 
