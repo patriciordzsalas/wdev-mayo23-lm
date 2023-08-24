@@ -1,14 +1,15 @@
 var formularioGrp = document.getElementById('formularioGrp');
-const modalSuccessGrp = new bootstrap.Modal(document.getElementById('modalSuccessGrp'))
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'))
 
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrearGrp = "InsertarCursoInsertarGrupo.php";
+var apicrearGrp = "InsertarGrupo.php";
 
 formularioGrp.addEventListener('submit', function(e){
 
     e.preventDefault();
     var datosEnviarGrp =  { 
-        "nombre":document.getElementById('nombre').value ,
+        "id":document.getElementById('id').value ,
+        "nombre":document.getElementById('nombre').value 
 
         }
 
@@ -20,7 +21,7 @@ formularioGrp.addEventListener('submit', function(e){
     })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
-        modalSuccessGrp.show()
+        modalSuccess.show()
         completeInsertGrp()
     
     })

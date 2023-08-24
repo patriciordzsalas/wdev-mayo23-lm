@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Crear Curso</title>
+  <title>Crear Grupo</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,24 +31,18 @@
         <div class="container">
             <div class="container">
 
-                <form id="formulario">
+                <form id="formularioGrp">
+                  <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input required type="text"
+                      class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese el Id">
+                    <small id="helpId" class="form-text text-muted">Id</small>
+                  </div>
                     <div class="mb-3">
                       <label for="" class="form-label">Nombre</label>
                       <input required type="text"
                         class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
                       <small id="helpId" class="form-text text-muted">Nombre</small>
-                    </div>
-                    <div class="mb-3">
-                      <label for="" class="form-label">Descripcion</label>
-                      <input required type="text"
-                          class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion">
-                      <small id="helpId" class="form-text text-muted">Descripcion</small>
-                    </div>
-                    <div class="mb-3">
-                      <label for="" class="form-label">Tiempo</label>
-                      <input required type="text"
-                          class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo">
-                      <small id="helpId" class="form-text text-muted">Tiempo</small>
                     </div>
                     <button type="reset" class="btn btn-danger">Reset</button> 
                     ||
@@ -102,7 +96,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-  <script src="js/crearcurso.js"></script>
+  <script src="js/creargrupo.js"></script>
 </body>
 
 </html>

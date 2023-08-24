@@ -42,7 +42,8 @@ function ajustardatostabla(datosEst){
                 
        tablaresultadoEst.innerHTML += `
             <tr class="table-primary" >
-                                <td scope="row">${objetoindividual.cedula}</td>
+                                <td scope="row">${objetoindividual.id}</td>
+                                <td>${objetoindividual.cedula}</td>
                                 <td>${objetoindividual.correoelectronico}</td>
                                 <td>${objetoindividual.telefono}</td>
                                 <td>${objetoindividual.telefonocelular}</td>
@@ -57,7 +58,7 @@ function ajustardatostabla(datosEst){
                                 <td>${objetoindividual.usuario}</td>
                                 
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalEst('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.nacionalidad}','${objetoindividual.idCarreras}','${objetoindividual.usuario}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -118,7 +119,8 @@ function completeDeleteEst(){
 //"idCarreras":"5",
 //"usuario":"Patricio Rdz"},
 
-function mostrarEditarModalEst(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,nacionalidad,idCarreras,usuario){
+function mostrarEditarModal(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,nacionalidad,idCarreras){
+    document.getElementById("id").value = id;
     document.getElementById("cedula").value = cedula;
     document.getElementById("correoelectronico").value = correoelectronico;
     document.getElementById("telefono").value = telefono;
@@ -131,7 +133,7 @@ function mostrarEditarModalEst(id,cedula,correoelectronico,telefono,telefonocelu
     document.getElementById("apellidomaterno").value = apellidomaterno;
     document.getElementById("nacionalidad").value = nacionalidad;
     document.getElementById("idCarreras").value = idCarreras;
-
+    
 
     myModalEditarEst.show();
 }
@@ -161,6 +163,7 @@ formularioEst.addEventListener('submit', function(e)
     //alert('salvando');
 
     var datosEditarEst = { 
+        "id":document.getElementById('id').value ,
         "cedula":document.getElementById('cedula').value ,
         "correoelectronico":document.getElementById('correoelectronico').value ,
         "telefono":document.getElementById('telefono').value ,

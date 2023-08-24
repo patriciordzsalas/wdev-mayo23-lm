@@ -5,7 +5,7 @@ var apieditarGrp = "ActualizarGrupo.php"
 
 const myModalEliminarGrp = new bootstrap.Modal(document.getElementById('myModalEliminarGrp'));
 const myModalEditarGrp = new bootstrap.Modal(document.getElementById('myModalEditarGrp'));
-const modalSuccessGrp = new bootstrap.Modal(document.getElementById('modalSuccessGrp'));
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
 
 let tablaresultadoGrp = document.querySelector('#tablaresultadoGrp');
 
@@ -34,7 +34,7 @@ function ajustardatostablaGrp(datos){
                                 <td scope="row">${objetoindividual.id}</td>
                                 <td>${objetoindividual.nombre}</td>
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalGrp('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalGrp('${objetoindividual.id}','${objetoindividual.nombre}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -49,7 +49,7 @@ function ajustardatostablaGrp(datos){
 
 function mostrarModal(id){
 
-    eliminandodatoGrp(id);
+    eliminandodato(id);
 
     myModalEliminarGrp.show();
     
@@ -111,15 +111,15 @@ formularioGrp.addEventListener('submit', function(e)
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
         //alert("Salvado")
-            modalSuccessGrp.show()
-             completeEdit()
+            modalSuccess.show()
+             completeEditGrp()
         })
     .catch(console.log);
 
    
 });
 
-function completeEdit(){
+function completeEditGrp(){
     myModalEditarGrp.hide();
     tablaresultadoGrp.innerHTML = ``;
     consultardatosGrp();

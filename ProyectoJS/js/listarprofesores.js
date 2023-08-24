@@ -60,7 +60,7 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.nacionalidad}</td>
                                 
                                 <td>
-                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModalProf('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                    <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.cedula}','${objetoindividual.correoelectronico}','${objetoindividual.telefono}','${objetoindividual.telefonocelular}','${objetoindividual.fechanacimiento}','${objetoindividual.sexo}','${objetoindividual.direccion}','${objetoindividual.nombre}','${objetoindividual.apellidopaterno}','${objetoindividual.apellidomaterno}','${objetoindividual.idCarreras}','${objetoindividual.usuario}','${objetoindividual.nacionalidad}')">Editar</a>
                                     ||
                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                                 </td>                              
@@ -73,9 +73,9 @@ function ajustardatostabla(datos){
            
 }
 
-function mostrarModal(cedula){
+function mostrarModal(id){
 
-    eliminandodatoProf(cedula);
+    eliminandodatoProf(id);
 
     myModalEliminarProf.show();
     
@@ -107,7 +107,7 @@ function completeDeleteProf(){
     
 }
 
-function mostrarEditarModalProf(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,idCarreras,usuario,nacionalidad,){
+function mostrarEditarModal(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno,idCarreras,usuario,nacionalidad,){
     document.getElementById("id").value = id;
     document.getElementById("cedula").value = cedula;
     document.getElementById("correoelectronico").value = correoelectronico;
@@ -165,7 +165,7 @@ formularioProf.addEventListener('submit', function(e)
         "apellidomaterno":document.getElementById('apellidomaterno').value ,
         "idCarreras":document.getElementById('idCarreras').value ,
         "usuario":"Patricio Rdz" ,
-        "nacionalidad":document.getElementById('nacionalidad').value ,
+        "nacionalidad":document.getElementById('nacionalidad').value 
         
     }
 
@@ -180,7 +180,7 @@ formularioProf.addEventListener('submit', function(e)
     .then((datosrespuesta) => {
         //alert("Salvado")
             modalSuccessProf.show()
-             completeEditEst()
+             completeEditProf()
         })
     .catch(console.log);
 

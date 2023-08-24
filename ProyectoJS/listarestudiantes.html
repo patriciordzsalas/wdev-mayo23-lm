@@ -35,6 +35,7 @@
               <thead class="table-light">
                   <caption>Lista de datos</caption>
                   <tr>
+                    <th>Id</th>
                     <th>Cedula</th>
                     <th>Correo electronico</th>
                     <th>Telefono</th>
@@ -90,73 +91,79 @@
               <div class="modal-body">
                 <form id="formularioEst">
                   <div class="mb-3">
-                    <label for="" class="form-label">Cedula</label>
+                    <label for="id" class="form-label">Id</label>
+                    <input required type="number" disabled
+                      class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Id</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cedula" class="form-label">Cedula</label>
                     <input required type="number"
                       class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Cedula</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Correo electronico</label>
+                    <label for="correoelectronico" class="form-label">Correo electronico</label>
                     <input required type="email"
                       class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Correo electronico</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Telefono</label>
+                    <label for="telefono" class="form-label">Telefono</label>
                     <input required type="number"
                       class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Telefono</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Telefono celular</label>
+                    <label for="telefonocelular" class="form-label">Telefono celular</label>
                     <input required type="number"
                       class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Telefono celular</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Fecha de nacimiento</label>
+                    <label for="fechanacimiento" class="form-label">Fecha de nacimiento</label>
                     <input required type="date"
                       class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Fecha de nacimiento</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Sexo</label>
+                    <label for="sexo" class="form-label">Sexo</label>
                     <input required type="text"
                       class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Sexo</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Direccion</label>
+                    <label for="direccion" class="form-label">Direccion</label>
                     <input required type="text"
                       class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Direccion</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Nombre</label>
+                    <label for="nombre" class="form-label">Nombre</label>
                     <input required type="text"
                       class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Nombre</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Apellido paterno</label>
+                    <label for="apellidopaterno" class="form-label">Apellido paterno</label>
                     <input required type="text"
                       class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Apellido paterno</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Apellido materno</label>
+                    <label for="apellidomaterno" class="form-label">Apellido materno</label>
                     <input required type="text"
                       class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Apellido materno</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Nacionalidad</label>
+                    <label for="nacionalidad" class="form-label">Nacionalidad</label>
                     <input required type="text"
                       class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Nacionalidad</small>
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label">Id Carrera</label>
+                    <label for="idCarreras" class="form-label">Id Carrera</label>
                     <input required type="number"
                         class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted">Id Carrera</small>
