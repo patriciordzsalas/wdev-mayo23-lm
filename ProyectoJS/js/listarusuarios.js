@@ -48,7 +48,7 @@ function ajustardatostablaUsr(datos){
            
 }
 
-function mostrarEditarModalUsr(id,name,email,password){
+function mostrarEditarModal(id,name,email,password){
     document.getElementById("id").value = id;
     document.getElementById("name").value = name;
     document.getElementById("email").value = email;
@@ -65,12 +65,12 @@ formularioUsr.addEventListener('submit', function(e)
     e.preventDefault();
     //alert('salvando');
 
-    var datosEditar = { 
+    var datosEditarUsr = { 
         "id":document.getElementById('id').value ,
         "name":document.getElementById('name').value ,
         "email":document.getElementById('email').value ,
         "password":document.getElementById('password').value ,
-        "usuario":"Patricio Rdz"
+    
     }
 
     console.log(datosEditarUsr)
@@ -95,6 +95,10 @@ function completeEditUsr(){
     myModalEditarUsr.hide();
     tablaresultadoUsr.innerHTML = ``;
     consultardatos();
+}
+
+function sendpassword(){
+   /////
 }
 
 consultardatos();

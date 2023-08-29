@@ -34,8 +34,8 @@
                 <form id="formularioUsr">
                   <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
-                    <input required type="text"
-                      class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Ingrese el Id">
+                    <input required type="number" disabled
+                      class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Id">
                     <small id="helpId" class="form-text text-muted">Id</small>
                   </div>
                   <div class="mb-3">
@@ -59,6 +59,11 @@
                       Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                     </div>
                     <br>
+                    <form action="mailto:'email'" method="post" enctype="text/plain">
+                      Nombre: <input type="text" name="name">
+                      Email: <input type="text" name="email">
+                      <input type="submit" name="submit" value="Submit">
+                    </form>
                   </div>
                     <button type="reset" class="btn btn-danger">Reset</button> 
                     ||

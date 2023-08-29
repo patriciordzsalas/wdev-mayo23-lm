@@ -30,13 +30,8 @@ formularioUsr.addEventListener('submit', function(e){
     .catch(console.log);
 
     console.log(datosEnviarUsr);
-    sendpassword();
     
 });
-
-function sendpassword(){
-    /////////////////////
-}
 
 function completeInsertUsr(){
     window.location = 'listarusuarios.html';
