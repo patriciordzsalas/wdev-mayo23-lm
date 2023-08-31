@@ -65,20 +65,19 @@ formularioUsr.addEventListener('submit', function(e)
     e.preventDefault();
     //alert('salvando');
 
-    var datosEditarUsr = { 
+    var datosEditar = { 
         "id":document.getElementById('id').value ,
         "name":document.getElementById('name').value ,
-        "email":document.getElementById('email').value ,
-        "password":document.getElementById('password').value ,
+        "password":document.getElementById('password').value 
     
     }
 
-    console.log(datosEditarUsr)
+    console.log(datosEditar)
     apiurl = apibase + apieditarUsr ;
     fetch(apiurl,
         {
             method:'POST',
-            body: JSON.stringify(datosEditarUsr)
+            body: JSON.stringify(datosEditar)
         })
     .then(estructura => estructura.json())
     .then((datosrespuesta) => {
@@ -95,10 +94,6 @@ function completeEditUsr(){
     myModalEditarUsr.hide();
     tablaresultadoUsr.innerHTML = ``;
     consultardatos();
-}
-
-function sendpassword(){
-   /////
 }
 
 consultardatos();
