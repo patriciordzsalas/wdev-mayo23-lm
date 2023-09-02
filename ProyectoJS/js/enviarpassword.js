@@ -26,7 +26,3 @@ formularioPss.addEventListener('submit', function(e)
         })
     .catch(console.log);
 });
-
-function completePss(){
-    
-}
