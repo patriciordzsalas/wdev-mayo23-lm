@@ -19,59 +19,94 @@
             //alert("Bienvenidos");
 
 
-            $("#Sumar").click(function (e) { 
+              $("#Sumar").click(function (e) { 
                 e.preventDefault();
-               
-            
-            });
+                var dato1 = $("#dato1").val() ;
+                var dato2 = $("#dato2").val() ;
 
-            $("#Sumar").val();
-
+                Sumar(dato1,dato2);
 
 
-            $("#Restar").click(function (e) { 
+              });
+
+              $("#Restar").click(function (e) { 
                 e.preventDefault();
-                mostrarResta();
-            });
+                var dato1 = $("#dato1").val() ;
+                var dato2 = $("#dato2").val() ;
 
-            $("#Multi").click(function (e) { 
-                e.preventDefault();
-                mostrarMulti();
-            
-            });
+                Restar(dato1,dato2);
+                
+              });
 
-            $("#Divide").click(function (e) { 
+              $("#Multi").click(function (e) { 
                 e.preventDefault();
-                mostrarDivide();
-            
-            });
+                var dato1 = $("#dato1").val() ;
+                var dato2 = $("#dato2").val() ;
+
+                Multi(dato1,dato2);
+                
+              });
+
+              $("#Divide").click(function (e) { 
+                e.preventDefault();
+                var dato1 = $("#dato1").val() ;
+                var dato2 = $("#dato2").val() ;
+
+                Divide(dato1,dato2);
+                
+              });
+
+              ////
+
+              $("#Ocultar").click(function (e) { 
+                e.preventDefault();
+                $("#contenedor1").hide();
+
+              });
+
+              $("#Mostrar").click(function (e) { 
+                e.preventDefault();
+                $("#contenedor1").show();
+
+              });
             
 
         });
 
-        var dato1 = document.getElementById("dato1");
-        var dato2 = document.getElementById("dato2");
-        
-        function mostrarSuma(){
-        var resultadosuma = dato1 + dato2;
-            alert(resultadosuma);
+        function Sumar(dato1,dato2){
+          
+           resultado = Number( dato1 ) + Number( dato2 );
+              
+           $("#resultado").val(resultado);
+            //alert(resultado);
+
         }
 
-        function mostrarResta(){ 
-        var resultadoresta = dato1 - dato2;
-            alert(resultadoresta);
-        }
+        function Restar(dato1,dato2){
+          
+           resultado = Number( dato1 ) - Number( dato2 );
+              
+           $("#resultado").val(resultado);
+            //alert(resultado);
 
-        function mostrarMulti(){
-        var resultadomulti = dato1 * dato2;
-            alert(resultadomulti);
         }
+        function Multi(dato1,dato2){
+          
+           resultado = Number( dato1 ) * Number( dato2 );
+              
+           $("#resultado").val(resultado);
+            //alert(resultado);
 
-        function mostrarDivide(){
-        var resultadodivide = dato1 / dato2;
-            alert(resultadodivide);
         }
+        function Divide(dato1,dato2){
+          
+           resultado = Number( dato1 ) / Number( dato2 );
+              
+           $("#resultado").val(resultado);
+            //alert(resultado);
 
+        }
+      
 
     </script>
 </head>
@@ -82,7 +117,7 @@
   </header>
   <main>
     <div>
-        <div class="mb-3">
+        <div class="mb-3" id="contenedor1">
           <label for="" class="form-label">Dato 1</label>
           <input type="number"
             class="form-control" name="dato1" id="dato1" aria-describedby="helpId" placeholder="Ingresar primer dato">
@@ -93,13 +128,24 @@
             <input type="number"
               class="form-control" name="dato2" id="dato2" aria-describedby="helpId" placeholder="Ingresar segundo dato">
             <small id="helpId" class="form-text text-muted"></small>
-          </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Resultado</label>
+            <input type="number"
+              class="form-control" name="resultado" id="resultado" aria-describedby="helpId" placeholder="Resultado">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
     </div>
     <div>
         <a name="Sumar" id="Sumar" class="btn btn-primary" href="#" role="button">Sumar</a>
         <a name="Restar" id="Restar" class="btn btn-danger" href="#" role="button">Restar</a>
         <a name="Multi" id="Multi" class="btn btn-success" href="#" role="button">Multi</a>
         <a name="Divide" id="Divide" class="btn btn-info" href="#" role="button">Divide</a>
+        ||
+        <a name="Ocultar" id="Ocultar" class="btn btn-info" href="#" role="button">Ocultar</a>
+        <a name="Mostrar" id="Mostrar" class="btn btn-info" href="#" role="button">Mostrar</a>
+
+
     </div>
   </main>
   <footer>
