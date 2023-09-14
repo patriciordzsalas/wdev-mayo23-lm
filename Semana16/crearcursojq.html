@@ -18,29 +18,37 @@
       var url = "https://paginas-web-cr.com/ApiPHP/apis/InsertarCursos.php";
 
       $(document).ready(function () {
-          crearCurso();
+        
+          $("#crear").click(function (e) { 
+            e.preventDefault();
+            crearCurso();
+
+          });
       });
       
       function crearCurso(){
 
-          var formulario = $("#formulario");
-          const modalSuccess = new bootstrap.Modal($("#modalSuccess"));
+        // var formulario = $("#formulario");
+        //const modalSuccess = new bootstrap.Modal($("#modalSuccess"));
           
-           formulario = {
-               nombre: nombre ,
-               descripcion: descripcion ,
-               tiempo: tiempo ,
+          var  formulario = {
+               nombre: $("#nombre").val() ,
+               descripcion: $("#descripcion").val() ,
+               tiempo: $("#tiempo").val() ,
                usuario: "Patricio Rdz"
-           }
+              }
+              console.log(formulario);
+          
 
           $.ajax({
-              type: "POST",
-              url: url,                
-              dataType: "json",
+              type: "POST" ,
+              url: url ,                
+              dataType: "json" ,
+              data: JSON.stringify(formulario) ,
               success: function (response) {
-                  $(modalSuccess).show();
+                  //$(modalSuccess).show();
                   completeInsert();
-                  //console.log(response);
+                  console.log(response);
               },
               error: function ( xhr, textStatus, errorThrown){
                   console.log("Error ", errorThrown);
@@ -110,7 +118,7 @@
                     </div>
                     <button type="reset" class="btn btn-danger">Reset</button> 
                     ||
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" id="crear" class="btn btn-primary">Enviar</button>
                 </form>
                 
             </div>

@@ -18,7 +18,26 @@
         var url = "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php";
 
         $(document).ready(function () {
+
+            let tablaresultado = document.querySelector('#tablaresultado');
             cargardatos();
+
+            $("#Eliminar").click(function (e) { 
+              e.preventDefault();
+
+              var botonEliminar = $("#Eliminar").val();
+
+              eliminardato(botonEliminar);
+
+            });
+
+            // $("#Editar").click(function (e) { 
+            //   e.preventDefault();
+
+            //   $("#Editar").val();
+
+            //   editardato();
+            // });
         });
 
         function cargardatos() {
@@ -33,7 +52,6 @@
                 error: function ( xhr, textStatus, errorThrown){
                     console.log("Error ", errorThrown);
                 }
-
             });
         }
         
@@ -56,9 +74,9 @@
                                  <td>${objetoindividual.tiempo}</td>
                                  <td>${objetoindividual.usuario}</td>
                                  <td>
-                                      <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                      <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal" ('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                                       ||
-                                      <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
+                                      <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarEliminarModal" ('${objetoindividual.id}')">Eliminar</a>
                                  </td>                              
               </tr>
             `;
@@ -67,6 +85,86 @@
           
 
        }
+
+       function mostrarEliminarModal(id){
+
+       eliminandodato(id);
+
+       //myModalEliminar.show();
+
+       }
+
+       function mostrarEditarModal(id){
+
+        //editandodato(id);
+
+        //myModalEliminar.show();
+
+       }
+
+       function eliminandodato(id){
+
+        var datosEnviar = { 
+        "id":id 
+        }
+        console.log(datosEnviar);
+      }
+
+        function eliminardato(){
+       
+          var datoseliminar = {
+          id : "id"
+          }
+          console.log(datoseliminar);
+
+         var urleliminar = "https://paginas-web-cr.com/ApiPHP/apis/BorrarCursos.php"
+
+          $.ajax({
+          type: "POST",
+          url: urleliminar,
+          data: "data",
+          dataType: "dataType",
+          body: JSON.stringify(datoseliminar),
+          success: function (response) {
+            completeDelete();
+          },
+          error: function ( xhr, textStatus, errorThrown){
+                    console.log("Error ", errorThrown);
+                }
+          });
+
+        }
+
+        function completeDelete(){
+          tablaresultado.innerHTML = ``;
+
+        } 
+
+//        function eliminandodato(id){
+    
+//        var datosEnviar =  { 
+//         "id":id
+//         }
+//         apiurl = apibase + apieliminar ;
+//         fetch(apiurl,
+//         {
+//             method: 'POST',
+//             body: JSON.stringify(datosEnviar)
+//         })
+//        .then(estructura => estructura.json())
+//        .then((datosrespuesta) => {
+//             completeDelete()
+
+//         })
+//     .catch(console.log);
+//     }
+
+//      function completeDelete(){
+//     myModalEliminar.hide();
+//     tablaresultado.innerHTML = ``;
+//     consultardatos();
+    
+      //}
 
 
     </script>
