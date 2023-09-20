@@ -42,7 +42,7 @@ function ajustardatostabla(datos){
                            <td>${objetoindividual.tiempo}</td>
                            <td>${objetoindividual.usuario}</td>
                            <td>
-                                <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditar ('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+                                <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditar('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                                 ||
                                 <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarEliminar('${objetoindividual.id}')">Eliminar</a>
                            </td>                              
@@ -55,7 +55,6 @@ function mostrarEliminar(id) {
     eliminardato(id);
     myModalEliminar.show();
 }
-
 function eliminardato(id) {
     var datosEliminar = {
         "id":id
@@ -82,6 +81,46 @@ function eliminardato(id) {
         tablaresultado.innerHTML = ``;
         cargardatos();
     }
+}
+
+cargardatos();
+
+
+function mostrarEditar(id,nombre,descripcion,tiempo,usuario){
+    
+    var datosEditar ={
+        id: $("#id").val() ,     
+        nombre: $("#nombre").val() ,
+        descripcion: $("#descripcion").val() ,
+        tiempo: $("#tiempo").val() ,
+        usuario: "Patricio Rdz"
+    }
+
+    myModalEditar.show();
+
+    var apiurl = apibase + apieditar;
+
+    $.ajax({
+        type: "POST",
+        url: apiurl,
+        data: JSON.stringify(datosEditar),
+        dataType: "dataType",
+        success: function (response) {
+            completeEdit();
+        },
+        error: function ( xhr, textStatus, errorThrown){
+            console.log("Error ", errorThrown);
+        }
+
+    });
+
+    function completeEdit() {
+        myModalEditar.hide();
+        tablaresultado.innerHTML = ``
+        cargardatos();
+        
+    }
+
 }
 
 cargardatos();

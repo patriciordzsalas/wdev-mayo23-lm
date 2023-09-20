@@ -46,7 +46,7 @@
               dataType: "json" ,
               data: JSON.stringify(formulario) ,
               success: function (response) {
-                  //$(modalSuccess).show();
+                  $(modalSuccess).show();
                   completeInsert();
                   console.log(response);
               },
@@ -57,7 +57,7 @@
           });
 
           function completeInsert(){
-            window.location = 'listarcurso.html';
+            window.location = 'listarcursojq.html';
           }
       }
 
