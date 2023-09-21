@@ -55,6 +55,7 @@ function mostrarEliminar(id) {
     eliminardato(id);
     myModalEliminar.show();
 }
+
 function eliminardato(id) {
     var datosEliminar = {
         "id":id
