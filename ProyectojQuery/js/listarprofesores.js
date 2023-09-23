@@ -1,22 +1,21 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultarEst = "ListaEstudiantes.php";
-var apieliminarEst = "BorrarEstudiantes.php";
-var apieditarEst = "ActualizarEstudiantes.php";
+var apiconsultarProf = "ListaProfesores.php";
+var apieliminarProf = "BorrarProfesores.php";
+var apieditarProf = "ActualizarProfesores.php";
 
-const myModalEliminarEst = new bootstrap.Modal(document.getElementById('myModalEliminarEst'));
-const myModalEditarEst = new bootstrap.Modal(document.getElementById('myModalEditarEst'));
-const modalSuccessEst = new bootstrap.Modal(document.getElementById('modalSuccessEst'));
+const myModalEliminarProf = new bootstrap.Modal(document.getElementById('myModalEliminarProf'));
+const myModalEditarProf = new bootstrap.Modal(document.getElementById('myModalEditarProf'));
+const modalSuccessProf = new bootstrap.Modal(document.getElementById('modalSuccessProf'));
 
-let tablaresultadoEst = document.querySelector('#tablaresultadoEst');
+let tablaresultadoProf = document.querySelector('#tablaresultadoProf');
 
 $(document).ready(function () {
     
     cargardatos();
 });
 
-
 function cargardatos() {
-    var apiurl = apibase + apiconsultarEst;
+    var apiurl = apibase + apiconsultarProf;
     $.ajax({
         type: "POST",
         url: apiurl,
@@ -32,11 +31,11 @@ function cargardatos() {
 }
 
 
-function ajustardatostabla(datosEst){
-    console.log("datosEst"+datosEst);
-    for (const objetoindividual of datosEst) {
+function ajustardatostabla(datosProf){
+    console.log("datosEst"+datosProf);
+    for (const objetoindividual of datosProf) {
                
-       tablaresultadoEst.innerHTML += `
+        tablaresultadoProf.innerHTML += `
             <tr class="table-primary" >
                                 <td scope="row">${objetoindividual.id}</td>
                                 <td>${objetoindividual.cedula}</td>
@@ -64,27 +63,27 @@ function ajustardatostabla(datosEst){
    
            
 }
-
+   
 function mostrarModal(id){
-    eliminandodatoEst(id);
-    myModalEliminarEst.show();
+    eliminandodatoProf(id);
+    myModalEliminarProf.show();
     
 }
 
-function eliminandodatoEst(id){
+function eliminandodatoProf(id){
     
-    var datosEnviarEst =  { 
+    var datosEnviarProf =  { 
         "id":id
         }
-        apiurl = apibase + apieliminarEst;
+        apiurl = apibase + apieliminarProf;
         $.ajax({
             type: "POST",
             url: apiurl,
-            data: JSON.stringify(datosEnviarEst),
+            data: JSON.stringify(datosEnviarProf),
             dataType: "json",
-            success: function (datosEnviarEst) {
-                completeDeleteEst();
-                console.log(datosEnviarEst);
+            success: function (datosEnviarProf) {
+                completeDeleteProf();
+                console.log(datosEnviarProf);
     
             },
             error: function ( xhr, textStatus, errorThrown){
@@ -92,9 +91,9 @@ function eliminandodatoEst(id){
             }
         });
     
-        function completeDeleteEst(){
-            myModalEliminarEst.hide();
-            tablaresultadoEst.innerHTML = ``;
+        function completeDeleteProf(){
+            myModalEliminarProf.hide();
+            tablaresultadoProf.innerHTML = ``;
             cargardatos();
             
         }
@@ -121,14 +120,15 @@ function mostrarEditarModal(id,cedula,correoelectronico,telefono,telefonocelular
       "Patricio Rdz"
     
 
-    myModalEditarEst.show();
+      myModalEditarProf.show();
 }
 
-$("#myModalEditarEst").submit(function (e) 
+
+$("#myModalEditarProf").submit(function (e) 
 {
     e.preventDefault();
 
-    var datosEditarEst = { 
+    var datosEditarProf = { 
         id: $("#id").val() ,
         cedula: $("#cedula").val() ,
         correoelectronico: $("#correoelectronico").val() ,
@@ -144,18 +144,18 @@ $("#myModalEditarEst").submit(function (e)
         idCarreras: $("#idCarreras").val() ,
         usuario:"Patricio Rdz"
     }
-    console.log(datosEditarEst);
+    console.log(datosEditarProf);
 
 
-    var apiurl = apibase + apieditarEst;
+    var apiurl = apibase + apieditarProf;
         $.ajax({
             type: "POST",
             url: apiurl,
-            data: JSON.stringify(datosEditarEst),
+            data: JSON.stringify(datosEditarProf),
             dataType: "json",
-            success: function (datosEditarEst) {
-                completeEditEst();
-                console.log(datosEditarEst);
+            success: function (datosEditarProf) {
+                completeEditProf();
+                console.log(datosEditarProf);
             },
             error: function ( xhr, textStatus, errorThrown){
                 console.log("Error ", errorThrown);
@@ -165,9 +165,9 @@ $("#myModalEditarEst").submit(function (e)
 
 });
 
-function completeEditEst(){
-    myModalEditarEst.hide();
-    tablaresultadoEst.innerHTML = ``;
+function completeEditProf(){
+    myModalEditarProf.hide();
+    tablaresultadoProf.innerHTML = ``;
     cargardatos();
 }
 

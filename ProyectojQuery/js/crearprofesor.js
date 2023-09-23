@@ -1,12 +1,12 @@
-var apibase = "https://paginas-web-cr.com/ApiPHP/apis/"
-var apicrearEst = "InsertarEstudiantes.php";
-var url = apibase + apicrearEst;
-const modalSuccessEst = new bootstrap.Modal(document.getElementById('modalSuccessEst'));
+const modalSuccessProf = new bootstrap.Modal(document.getElementById('modalSuccessProf'))
 
-$("#formularioEst").submit(function (e) { 
+var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
+var apicrearProf = "InsertarProfesores.php";
+
+$("#formularioProf").submit(function (e) { 
     e.preventDefault();
 
-    var datosEst ={
+    var datosProf ={
       id: $("#id").val() ,     
       cedula: $("#cedula").val() ,
       correoelectronico: $("#correoelectronico").val() ,
@@ -21,18 +21,18 @@ $("#formularioEst").submit(function (e) {
       idCarrera: $("#idCarreras").val() ,
       usuario: "Patricio Rdz"
     }
-    console.log(datosEst);
+    console.log(datosProf);
     
-
+    var url = apibase + apicrearProf;
     $.ajax({
         type: "POST" ,
         url: url ,                
         dataType: "json" ,
-        data: JSON.stringify(datosEst) ,
-        success: function (datosEst) {
-            $(modalSuccessEst).show();
-            completeInsertEst()
-            console.log(datosEst);
+        data: JSON.stringify(datosProf) ,
+        success: function (datosProf) {
+            $(modalSuccessProf).show();
+            completeInsertProf()
+            console.log(datosProf);
             
         },
         error: function ( xhr, textStatus, errorThrown){
@@ -44,7 +44,7 @@ $("#formularioEst").submit(function (e) {
   });
 
 
-function completeInsertEst(){
-    window.location = 'listarestudiantes.html';
+function completeInsertProf(){
+    window.location = 'listarprofesores.html';
 
 }

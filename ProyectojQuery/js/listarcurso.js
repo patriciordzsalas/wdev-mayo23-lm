@@ -68,8 +68,9 @@ function eliminardato(id) {
         url: apiurl,
         data: JSON.stringify(datosEliminar),
         dataType: "json",
-        success: function (response) {
+        success: function (datosEliminar) {
             completeDelete();
+            console.log(datosEliminar);
 
         },
         error: function ( xhr, textStatus, errorThrown){
