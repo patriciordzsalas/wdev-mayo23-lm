@@ -3,6 +3,14 @@ const modalSuccessProf = new bootstrap.Modal(document.getElementById('modalSucce
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apicrearProf = "InsertarProfesores.php";
 
+$(document).ready(function () {
+  
+    $("#crear").click(function (e) { 
+      e.preventDefault();
+      //crear();
+
+    });
+});
 $("#formularioProf").submit(function (e) { 
     e.preventDefault();
 
@@ -31,6 +39,7 @@ $("#formularioProf").submit(function (e) {
         data: JSON.stringify(datosProf) ,
         success: function (datosProf) {
             $(modalSuccessProf).show();
+            alert("Ingreso exitoso");
             completeInsertProf()
             console.log(datosProf);
             

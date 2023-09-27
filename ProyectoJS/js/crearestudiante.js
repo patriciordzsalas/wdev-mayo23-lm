@@ -7,6 +7,7 @@ var apicrearEst = "InsertarEstudiantes.php";
 formularioEst.addEventListener('submit', function(e){
 
     e.preventDefault();
+    
     var datosCrearEst =  { 
         "cedula":document.getElementById('cedula').value ,
         "correoelectronico":document.getElementById('correoelectronico').value ,

@@ -1,47 +1,50 @@
 const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'))
 
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrearGrp = "InsertarGrupo.php";
+var apicrearUsr = "InsertarUsuarios.php";
+
 
 $(document).ready(function () {
   
-    $("#crear").click(function (e) { 
+    $("#modalSuccess").click(function (e) { 
       e.preventDefault();
-      //crearGrupo();
+      //crearUsr();
 
     });
 });
 
-$("#formularioGrp").submit(function (e) { 
+
+$("#formularioUsr").submit(function (e) { 
     e.preventDefault();
 
-    var datosConsultar ={
+    var datosConsultarUsr ={
       id: $("#id").val() ,     
-      nombre: $("#nombre").val() 
+      name: $("#name").val() ,
+      email: $("#email").val() ,
+      password: $("#password").val() 
 
     }   
 
-    var apiurl = apibase + apicrearGrp;
+    var apiurl = apibase + apicrearUsr;
     $.ajax({
         type: "POST" ,
         url: apiurl ,                
         dataType: "json" ,
-        data: JSON.stringify(datosConsultar) ,
-        success: function (datosConsultar) {
+        data: JSON.stringify(datosConsultarUsr) ,
+        success: function (response) {
             $(modalSuccess).show();
-            completeInsertGrp();
-            console.log(datosConsultar);
+            completeInsertUsr();
+            console.log(response);
         },
         error: function ( xhr, textStatus, errorThrown){
             console.log("Error ", errorThrown);
         }
         
-});
+    });
 
 });
 
-
-function completeInsertGrp(){
-    window.location = 'listargrupo.html';
+function completeInsertUsr(){
+    window.location = 'listarusuarios.html';
 
 }

@@ -12,10 +12,12 @@ let tablaresultadoEst = document.querySelector('#tablaresultadoEst');
 $(document).ready(function () {
     
     cargardatos();
+    
 });
 
 
 function cargardatos() {
+
     var apiurl = apibase + apiconsultarEst;
     $.ajax({
         type: "POST",
@@ -76,7 +78,8 @@ function eliminandodatoEst(id){
     var datosEnviarEst =  { 
         "id":id
         }
-        apiurl = apibase + apieliminarEst;
+
+        var apiurl = apibase + apieliminarEst;
         $.ajax({
             type: "POST",
             url: apiurl,

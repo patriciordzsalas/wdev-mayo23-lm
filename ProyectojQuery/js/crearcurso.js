@@ -5,7 +5,7 @@ $(document).ready(function () {
   
     $("#crear").click(function (e) { 
       e.preventDefault();
-      crearCurso();
+      //crearCurso();
 
     });
 });

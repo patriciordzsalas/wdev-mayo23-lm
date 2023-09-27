@@ -1,13 +1,23 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/"
 var apicrearEst = "InsertarEstudiantes.php";
-var url = apibase + apicrearEst;
+
 const modalSuccessEst = new bootstrap.Modal(document.getElementById('modalSuccessEst'));
+
+$(document).ready(function () {
+
+  $("#crearestudiante").click(function (e) { 
+    e.preventDefault();
+    //crearEst();
+
+  });
+});
+
+
 
 $("#formularioEst").submit(function (e) { 
     e.preventDefault();
 
-    var datosEst ={
-      id: $("#id").val() ,     
+    var datosEst ={    
       cedula: $("#cedula").val() ,
       correoelectronico: $("#correoelectronico").val() ,
       telefonocelular: $("#telefonocelular").val() ,
@@ -23,16 +33,18 @@ $("#formularioEst").submit(function (e) {
     }
     console.log(datosEst);
     
-
+    
+    var apiurl = apibase + apicrearEst;
     $.ajax({
         type: "POST" ,
-        url: url ,                
+        url: apiurl ,                
         dataType: "json" ,
         data: JSON.stringify(datosEst) ,
-        success: function (datosEst) {
-            $(modalSuccessEst).show();
-            completeInsertEst()
-            console.log(datosEst);
+        success: function (response) {
+            modalSuccessEst.show();
+            alert("Ingreso exitoso");
+            completeInsertEst();
+            console.log(response);
             
         },
         error: function ( xhr, textStatus, errorThrown){

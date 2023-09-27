@@ -67,13 +67,13 @@ function mostrarEditarModal(id, name, email, password){
 }
 
 
-$("#btnEnviar").submit(function (e) { 
+$("#myModalEditarUsr").submit(function (e) { 
     e.preventDefault();
     
     var datosEditarUsr ={
-        "name": $("#name").val() ,
-        "password": $("#password").val() ,
-        "id": $("#id").val() 
+        name: $("#name").val() ,
+        password: $("#password").val() ,
+        id: $("#id").val() 
 
     }
     console.log(datosEditarUsr);
@@ -94,13 +94,15 @@ $("#btnEnviar").submit(function (e) {
 
         });
 
+        function completeEditUsr() {
+            myModalEditarUsr.hide();
+            tablaresultadoUsr.innerHTML = ``;
+            cargardatos();
+            
+        }
+        
+
 });
 
-function completeEditUsr() {
-    myModalEditarUsr.hide();
-    tablaresultadoUsr.innerHTML = ``;
-    cargardatos();
-    
-}
 
 cargardatos();
