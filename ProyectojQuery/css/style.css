@@ -1,0 +1,16 @@
+.card {
+    background-image : url(../img/bckgrd.avif) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.card-title{
+    color: rgb(189, 189, 189);
+}
+
+.card-text{
+    color: white;
+}
+

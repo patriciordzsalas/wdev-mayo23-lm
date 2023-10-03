@@ -1,0 +1,19 @@
+#paragraph {
+    background-image : url(../img/bckgrd.avif) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.card-title{
+    color: rgb(189, 189, 189);
+}
+
+.card-text{
+    color: white;
+}
+
+#footer{
+    background-color: rgba(201, 196, 196, 0.11);
+}
