@@ -14,23 +14,7 @@ menuprincipal.innerHTML += `
         </li>
         <li class="nav-item">
         <a class="nav-link active" href="enviarpassword.html" aria-current="page">Enviar Password<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="listarestudiantes.html" aria-current="page">Estudiantes<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="listarprofesores.html" aria-current="page">Profesores<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="listargrupo.html" aria-current="page">Grupos<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="listarcurso.html" aria-current="page">Cursos<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="listarusuarios.html" aria-current="page">Usuarios<span class="visually-hidden">(current)</span></a>
-        </li>
-        
+        </li>        
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
