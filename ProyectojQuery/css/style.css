@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 .card-title{
@@ -14,3 +13,6 @@
     color: white;
 }
 
+.navbar-brand{
+    margin-left: 10px;
+}
