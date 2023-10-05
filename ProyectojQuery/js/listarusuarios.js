@@ -3,7 +3,7 @@ var apiconsultarUsr = "ListaUsuarios.php";
 var apieditarUsr = "ActualizarUsuarios.php";
 
 const myModalEditarUsr = new bootstrap.Modal(document.getElementById('myModalEditarUsr'));
-//const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
 
 let tablaresultadoUsr = document.querySelector('#tablaresultadoUsr');
 
@@ -95,6 +95,7 @@ $("#myModalEditarUsr").submit(function (e) {
         });
 
         function completeEditUsr() {
+            modalSuccess.show();
             myModalEditarUsr.hide();
             tablaresultadoUsr.innerHTML = ``;
             cargardatos();

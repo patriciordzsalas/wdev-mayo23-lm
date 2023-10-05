@@ -27,7 +27,8 @@ $("#formulario").submit(function (e) {
               dataType: "json" ,
               data: JSON.stringify(datosConsultar) ,
               success: function (datosConsultar) {
-                  $(modalSuccess).show();
+                  modalSuccess.show();
+                  alert("Ingreso exitoso");
                   completeInsert();
                   console.log(datosConsultar);
               },
@@ -40,6 +41,7 @@ $("#formulario").submit(function (e) {
 });
 
 function completeInsert(){
-window.location = 'listarcurso.html';
+  modalSuccess.hide();
+  window.location = 'listarcurso.html';
 }
       

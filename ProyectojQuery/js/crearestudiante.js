@@ -62,6 +62,7 @@ $("#crear").click(function (e) {
     });
 
 function completeInsertEst(){
+  modalSuccessEst.hide();
   window.location = 'listarestudiantes.html';
   
 }

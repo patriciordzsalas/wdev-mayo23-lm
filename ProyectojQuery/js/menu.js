@@ -18,22 +18,22 @@ menuprincipal.innerHTML += `
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="listarestudiantes.html">ListarEstudiantes</a>
-                <a class="dropdown-item" href="listarprofesores.html">ListarProfesores</a>
-                <a class="dropdown-item" href="listarcurso.html">ListarCurso</a>
-                <a class="dropdown-item" href="listargrupo.html">ListarGrupo</a>
-                <a class="dropdown-item" href="listarusuarios.html">ListarUsuarios</a>
+                <a class="dropdown-item" href="listarestudiantes.html">Listar Estudiantes</a>
+                <a class="dropdown-item" href="listarprofesores.html">Listar Profesores</a>
+                <a class="dropdown-item" href="listarcurso.html">Listar Curso</a>
+                <a class="dropdown-item" href="listargrupo.html">Listar Grupo</a>
+                <a class="dropdown-item" href="listarusuarios.html">Listar Usuarios</a>
                 
             </div>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Crear</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="crearestudiante.html">CrearEstudiantes</a>
-            <a class="dropdown-item" href="crearprofesor.html">CrearProfesores</a>
-            <a class="dropdown-item" href="crearcurso.html">CrearCurso</a>
-            <a class="dropdown-item" href="creargrupo.html">CrearGrupo</a>
-            <a class="dropdown-item" href="crearusuario.html">CrearUsuario</a>
+            <a class="dropdown-item" href="crearestudiante.html">Crear Estudiantes</a>
+            <a class="dropdown-item" href="crearprofesor.html">Crear Profesores</a>
+            <a class="dropdown-item" href="crearcurso.html">Crear Curso</a>
+            <a class="dropdown-item" href="creargrupo.html">Crear Grupo</a>
+            <a class="dropdown-item" href="crearusuario.html">Crear Usuario</a>
 
             </div>
         </li>

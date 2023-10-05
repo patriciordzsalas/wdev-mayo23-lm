@@ -123,6 +123,7 @@ $("#myModalEditarGrp").submit(function (e) {
         });
 
         function completeEditGrp() {
+            modalSuccess.show();
             myModalEditarGrp.hide();
             tablaresultadoGrp.innerHTML = ``
             cargardatos();

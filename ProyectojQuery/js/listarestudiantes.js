@@ -169,6 +169,7 @@ $("#myModalEditarEst").submit(function (e)
 });
 
 function completeEditEst(){
+    modalSuccessEst.show();
     myModalEditarEst.hide();
     tablaresultadoEst.innerHTML = ``;
     cargardatos();

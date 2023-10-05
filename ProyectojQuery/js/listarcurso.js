@@ -128,6 +128,7 @@ $("#myModalEditar").submit(function (e) {
         });
 
         function completeEdit() {
+            modalSuccess.show();
             myModalEditar.hide();
             tablaresultado.innerHTML = ``
             cargardatos();

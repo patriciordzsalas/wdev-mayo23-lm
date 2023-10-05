@@ -31,8 +31,7 @@ $("#crear").click(function (e) {
 
     crearprof(datosProf);
 
-    function crearprof(datosProf) {
-      alert("datos enviados");    
+    function crearprof(datosProf) {    
       var url = apibase + apicrearProf;
       $.ajax({
           type: "POST" ,
@@ -40,7 +39,7 @@ $("#crear").click(function (e) {
           dataType: "json" ,
           data: JSON.stringify(datosProf) ,
           success: function (response) {
-              $(modalSuccessProf).show();
+              modalSuccessProf.show();
               alert("Ingreso exitoso");
               completeInsertProf();
               console.log(response);
@@ -56,6 +55,7 @@ $("#crear").click(function (e) {
 
 
 function completeInsertProf(){
+    modalSuccessProf.hide();
     window.location = 'listarprofesores.html';
 
 }

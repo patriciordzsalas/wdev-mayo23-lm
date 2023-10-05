@@ -166,6 +166,7 @@ $("#myModalEditarProf").submit(function (e)
 });
 
 function completeEditProf(){
+    modalSuccessProf.show();
     myModalEditarProf.hide();
     tablaresultadoProf.innerHTML = ``;
     cargardatos();
