@@ -6,3 +6,9 @@ export class Cursos {
     usuario: string = "";
 
 }
+
+// export interface CursoResponse {
+//     code: number;
+//     message: string;
+//     data: Cursos[];
+//   }

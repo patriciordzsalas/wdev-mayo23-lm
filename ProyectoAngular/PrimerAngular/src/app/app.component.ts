@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Cursos } from './models/cursos';
 //import importa librerias o clases
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Respuestacursos } from './models/respuestacursos';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,11 +27,25 @@ export class AppComponent implements OnInit {
   constructor (private http: HttpClient) {}
 
   ngOnInit(): void {
-    //  this.obtenerDatos();
+      this.obtenerDatos();
   }
 
-  obtenerDatos(){
-    const url = "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php" ;
+
+   obtenerDatos(){
+    const url = "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php";
+
+
+    this.http.get<Respuestacursos>(url).subscribe(
+      (response) => {
+        this.arregloDatos = response.data;
+        console.log(response.data);
+      },
+      (error) =>{
+        console.error('Error en la carga de datos', error);
+      }
+    )
+
   }
+
 }
 
