@@ -1,0 +1,59 @@
+<!-- <p>profesores works!</p> -->
+<div class="container">
+    <div class="toolbar" role="banner">
+      <span>Lista de Profesores</span>    
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class="table-responsive">
+        <table class="table table-striped
+        table-hover
+        table-borderless
+        table-black
+        align-middle">
+          <thead class="table-light">
+              <!-- <caption>Lista de datos</caption> -->
+              <span>Lista de datos</span>
+                <tr>
+                <th>ID</th>
+                <th>Cedula</th>
+                <th>Correo Electronico</th>
+                <th>Telefono</th>
+                <th>Telefono Celular</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Direccion</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Id Carreras</th>
+                <th>Usuario</th>
+                <th>Nacionalidad</th>
+                <!-- <th>Acciones</th> -->
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" >
+            <tr class="table-primary" *ngFor="let item of arregloDatosPrs">
+              <td scope="row">{{item.id}} </td>
+              <td>{{item.cedula}}</td>
+              <td>{{item.correoelectronico}}</td>
+              <td>{{item.telefono}}</td>
+              <td>{{item.telefonocelular}}</td>
+              <td>{{item.fechanacimiento}}</td>
+              <td>{{item.sexo}}</td>
+              <td>{{item.direccion}}</td>
+              <td>{{item.apellidopaterno}}</td>
+              <td>{{item.apellidomaterno}}</td>
+              <td>{{item.idCarreras}}</td>
+              <td>{{item.usuario}}</td>
+              <td>{{item.nacionalidad}}</td>
+            </tr>
+            </tbody>
+            <tfoot>
+    
+            </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>

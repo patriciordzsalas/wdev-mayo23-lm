@@ -1,10 +1,8 @@
-<!-- <p>cursos works!</p> -->
+<!-- <p>grupos works!</p> -->
 
-  <!-- Toolbar -->
-  
-  <div class="container">
+<div class="container">
     <div class="toolbar" role="banner">
-      <span>Lista de Cursos</span>    
+      <span>Lista de Grupos</span>    
     <div class="container">
       <br>
       <br>
@@ -21,19 +19,19 @@
                 <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <!-- <th>Descripcion</th>
                 <th>Tiempo</th>
-                <th>Usuario</th>
+                <th>Usuario</th> -->
                 <!-- <th>Acciones</th> -->
               </tr>
             </thead>
             <tbody class="table-group-divider" >
-            <tr class="table-primary" *ngFor="let item of arregloDatos">
+            <tr class="table-primary" *ngFor="let item of arregloDatosGrp">
               <td scope="row">{{item.id}} </td>
               <td>{{item.nombre}}</td>
-              <td>{{item.descripcion}}</td>
+              <!-- <td>{{item.descripcion}}</td>
               <td>{{item.tiempo}}</td>
-              <td>{{item.usuario}}</td>
+              <td>{{item.usuario}}</td> -->
             </tr>
             </tbody>
             <tfoot>
@@ -43,3 +41,4 @@
       </div>
     </div>
   </div>
+
