@@ -8,6 +8,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { EstudiantesComponent } from './estudiantes/estudiantes.component';
     GruposComponent,
     ProfesoresComponent,
     EstudiantesComponent,
+    UsuariosComponent,
   ],
   imports: [
     BrowserModule,
