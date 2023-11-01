@@ -402,7 +402,27 @@
     </a>
 
   </div>
-
+<!-- <div class="container">
+  Nav tabs
+  <ul class="nav nav-tabs">
+    <li class="nav-item" >
+      <button class="nav-link active" [class.active]="pestanaActiva === 'pestana1'" (click)="cambiarPestana('pestana1')" >Home</button>
+    </li>
+    <li class="nav-item" >
+      <button class="nav-link"  [class.active]="pestanaActiva === 'pestana2'" (click)="cambiarPestana('pestana2')">Profile</button>
+    </li>
+    <li class="nav-item" >
+      <button class="nav-link"  [class.active]="pestanaActiva === 'pestana3'" (click)="cambiarPestana('pestana3')">Messages</button>
+    </li>
+  </ul>
+  
+  Tab panes 
+<div class="tab-content">
+    <div *ngIf="pestanaActiva === 'pestana1'"> <app-cursos></app-cursos> </div>
+    <div *ngIf="pestanaActiva === 'pestana2'"> <app-grupos></app-grupos> </div>
+    <div *ngIf="pestanaActiva === 'pestana3'"> <app-estudiantes></app-estudiantes> </div>
+  </div>
+</div> -->
   <!-- <div class="container-fluid">
   <app-cursos></app-cursos>
 </div>

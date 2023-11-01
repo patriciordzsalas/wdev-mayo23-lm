@@ -13,6 +13,11 @@ export class CursosComponent implements OnInit {
 
   title = 'PrimerAngular';
 
+  // pestanaActiva: string = 'pestana1';
+  // cambiarPestana(pestana: string){
+  //   this.pestanaActiva = pestana;
+  // }
+
   arregloDatos: Cursos[] = []
 
   constructor (private http: HttpClient) {}
