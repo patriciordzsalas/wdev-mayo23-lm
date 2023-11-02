@@ -371,6 +371,7 @@
   <!-- <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>  -->
 
+
   <div class="card-container">
     <a class="card" target="_blank" rel="noopener" href="#" routerLink="usuarios">
       <!-- <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg> -->
@@ -402,6 +403,26 @@
     </a>
 
   </div>
+  <div class="container">
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre</label>
+      <input type="text"
+        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+      <small id="helpId" class="form-text text-muted">Nombre</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Descripcion</label>
+      <input type="text"
+        class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="descripcion">
+      <small id="helpId" class="form-text text-muted">Descripcion</small>
+    </div><div class="mb-3">
+      <label for="" class="form-label">Tiempo</label>
+      <input type="text"
+        class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="tiempo">
+      <small id="helpId" class="form-text text-muted">Tiempo</small>
+    </div>
+    
+  </div>
 <!-- <div class="container">
   Nav tabs
   <ul class="nav nav-tabs">
@@ -422,7 +443,7 @@
     <div *ngIf="pestanaActiva === 'pestana2'"> <app-grupos></app-grupos> </div>
     <div *ngIf="pestanaActiva === 'pestana3'"> <app-estudiantes></app-estudiantes> </div>
   </div>
-</div> -->
+</div>  -->
   <!-- <div class="container-fluid">
   <app-cursos></app-cursos>
 </div>
