@@ -9,6 +9,7 @@ import { GruposComponent } from './grupos/grupos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

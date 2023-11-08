@@ -15,6 +15,11 @@ export class AppComponent implements OnInit {
   //atributos
   title = 'PrimerAngular';
 
+  pestanaActiva: string = 'pestana1';
+  cambiarPestana(pestana: string){
+    this.pestanaActiva = pestana;
+  }
+
   // arregloDatos: Cursos[] = [
   //   {id: "1", nombre:"html5", descripcion: "111", tiempo: "444", usuario: "Patricio Rdz"},
   //   {id: "2", nombre:"css3", descripcion: "112", tiempo: "333", usuario: "Patricio Rdz"},

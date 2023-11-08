@@ -1,8 +1,41 @@
 <!-- <p>cursos works!</p> -->
 
   <!-- Toolbar -->
+
   
   <div class="container">
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre</label>
+      <input type="text" [(ngModel)]="modeloCurso.nombre"        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Descripcion</label>
+      <input type="text" [(ngModel)]="modeloCurso.descripcion" 
+        class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="descripcion">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Tiempo</label>
+      <input type="text" [(ngModel)]="modeloCurso.tiempo" 
+        class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="tiempo">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Usuario</label>
+      <input type="text" [(ngModel)]="modeloCurso.usuario" 
+        class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="usuario">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="button" name="" id="" class="btn btn-primary" (click)="addAndEdit()">Guardar</button>
+    </div>
+  </div>
+  <div class="container">
+  
+    
+
+
     <div class="toolbar" role="banner">
       <span>Lista de Cursos</span>    
     <div class="container">
@@ -17,14 +50,14 @@
         align-middle">
           <thead class="table-light">
               <!-- <caption>Lista de datos</caption> -->
-              <span>Lista de datos</span>
+              <!-- <span>Lista de datos</span> -->
                 <tr>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Tiempo</th>
                 <th>Usuario</th>
-                <!-- <th>Acciones</th> -->
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody class="table-group-divider" >
@@ -34,6 +67,7 @@
               <td>{{item.descripcion}}</td>
               <td>{{item.tiempo}}</td>
               <td>{{item.usuario}}</td>
+              <td>"botonEliminar"</td>
             </tr>
             </tbody>
             <tfoot>
