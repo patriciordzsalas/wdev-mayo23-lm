@@ -13,14 +13,34 @@ export class CursosComponent implements OnInit {
 
   title = 'PrimerAngular';
 
+  textoboton = 'Guardar'
+
   modeloCurso: Cursos = new Cursos ();
 
   arregloDatos: Cursos[] = [];
 
   addAndEdit(){
     this.enviarSolicitudPost();
+    this.modeloCurso.usuario = "Patricio Rdz";
+
+    if(this.modeloCurso.id == ""){
+      this.enviarSolicitudPost();
+    }else{
+      this.enviarSolicitudPostEditar();
+      this.limpiar();
+    }
   }
 
+  cargaredicion(item: Cursos){
+    this.modeloCurso = item;
+    console.log(item);
+    // this.textoboton = "Modificar";
+    
+  }    
+  limpiar(){
+    this.modeloCurso = new Cursos();
+    // this.textoboton = "Guardar";
+  }
   constructor (private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -72,4 +92,32 @@ export class CursosComponent implements OnInit {
     );
   }
 
+  enviarSolicitudPostEditar(){
+    const url = 'https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php';
+    
+    // // Datos que deseas enviar en la solicitud POST
+    // const data = {
+    //   parametro1: 'valor1',
+    //   parametro2: 'valor2'
+    //   // Agrega más datos según tus necesidades
+    // };
+
+    // Configura las cabeceras para la solicitud POST
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json' // Ajusta el tipo de contenido según el requerimiento de la API
+    });
+
+    // Realiza la solicitud POST
+    this.http.post(url, this.modeloCurso, { headers }).subscribe(
+      (response) => {
+        // Maneja la respuesta de la API
+        console.log('Respuesta de la API:', response);
+        this.obtenerDatos();
+      },
+      (error) => {
+        // Maneja los errores de la solicitud
+        console.error('Error:', error);
+      }
+    );
+  }
 }
