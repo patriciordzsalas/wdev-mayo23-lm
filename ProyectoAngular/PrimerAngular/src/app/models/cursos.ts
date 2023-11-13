@@ -6,4 +6,3 @@ export class Cursos {
     usuario: string = "";
 
 }
-
