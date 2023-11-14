@@ -1,5 +1,80 @@
 <!-- <p>estudiantes works!</p> -->
 <div class="container">
+  <div class="mb-3">
+    <label for="" class="form-label">Cedula</label>
+    <input type="text" [(ngModel)]="modeloEst.cedula"        class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="cedula">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Correo Electronico</label>
+    <input type="text" [(ngModel)]="modeloEst.correoelectronico"        class="form-control" name="correoelectronico" id="correoelectronico" aria-describedby="helpId" placeholder="correoelectronico">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Telefono</label>
+    <input type="text" [(ngModel)]="modeloEst.telefono"        class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="telefono">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Telefono Celular</label>
+    <input type="text" [(ngModel)]="modeloEst.telefonocelular"        class="form-control" name="telefonocelular" id="telefonocelular" aria-describedby="helpId" placeholder="telefonocelular">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Fecha de nacimiento</label>
+    <input type="text" [(ngModel)]="modeloEst.fechanacimiento"        class="form-control" name="fechanacimiento" id="fechanacimiento" aria-describedby="helpId" placeholder="fechanacimiento">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Sexo</label>
+    <input type="text" [(ngModel)]="modeloEst.sexo"        class="form-control" name="sexo" id="sexo" aria-describedby="helpId" placeholder="sexo">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Direccion</label>
+    <input type="text" [(ngModel)]="modeloEst.direccion"        class="form-control" name="direccion" id="direccion" aria-describedby="helpId" placeholder="direccion">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Nombre</label>
+    <input type="text" [(ngModel)]="modeloEst.nombre"        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Apellido Paterno</label>
+    <input type="text" [(ngModel)]="modeloEst.apellidopaterno"        class="form-control" name="apellidopaterno" id="apellidopaterno" aria-describedby="helpId" placeholder="apellidopaterno">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Apellido Materno</label>
+    <input type="text" [(ngModel)]="modeloEst.apellidomaterno"        class="form-control" name="apellidomaterno" id="apellidomaterno" aria-describedby="helpId" placeholder="apellidomaterno">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Id Carreras</label>
+    <input type="text" [(ngModel)]="modeloEst.idCarreras"        class="form-control" name="idCarreras" id="idCarreras" aria-describedby="helpId" placeholder="idCarreras">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Usuario</label>
+    <input type="text" [(ngModel)]="modeloEst.usuario" 
+      class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder="usuario">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Nacionalidad</label>
+    <input type="text" [(ngModel)]="modeloEst.nacionalidad" 
+      class="form-control" name="nacionalidad" id="nacionalidad" aria-describedby="helpId" placeholder="nacionalidad">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+   
+  <div class="d-grid gap-2">
+    <button type="button" name="" id="" class="btn btn-primary" (click)="addAndEdit()">Guardar</button>
+  </div>
+</div>
+<div class="container">
+  
     <div class="toolbar" role="banner">
       <span>Lista de Estudiantes</span>    
     <div class="container">
@@ -30,7 +105,7 @@
                 <th>Id Carreras</th>
                 <th>Usuario</th>
                 <th>Nacionalidad</th>
-                <!-- <th>Acciones</th> -->
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody class="table-group-divider" >
@@ -43,11 +118,15 @@
               <td>{{item.fechanacimiento}}</td>
               <td>{{item.sexo}}</td>
               <td>{{item.direccion}}</td>
+              <td>{{item.nombre}}</td>
               <td>{{item.apellidopaterno}}</td>
               <td>{{item.apellidomaterno}}</td>
               <td>{{item.idCarreras}}</td>
               <td>{{item.usuario}}</td>
               <td>{{item.nacionalidad}}</td>
+              <td><button type="button" class="btn btn-primary" (click)="eliminar(item)">Eliminar</button>
+              </td>
+
             </tr>
             </tbody>
             <tfoot>

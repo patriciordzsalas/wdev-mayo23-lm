@@ -1,5 +1,27 @@
 <!-- <p>usuarios works!</p> -->
   <!-- Toolbar -->
+  <div class="container">
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre</label>
+      <input type="text" [(ngModel)]="modeloUsr.name"        class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="name">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Email</label>
+      <input type="text" [(ngModel)]="modeloUsr.email" 
+        class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="email">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Password</label>
+      <input type="text" [(ngModel)]="modeloUsr.password" 
+        class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="password">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="button" name="" id="" class="btn btn-primary" (click)="addAndEdit()">Guardar</button>
+    </div>
+  </div>
   
   <div class="container">
     <div class="toolbar" role="banner">

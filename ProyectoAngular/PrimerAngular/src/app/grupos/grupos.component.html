@@ -1,5 +1,15 @@
 <!-- <p>grupos works!</p> -->
-
+<div class="container">
+  <div class="mb-3">
+    <label for="" class="form-label">Nombre</label>
+    <input type="text" [(ngModel)]="modeloGrp.nombre"        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+  <div class="d-grid gap-2">
+    <button type="button" name="" id="" class="btn btn-primary" (click)="addAndEdit()">Guardar</button>
+  </div>
+</div>
+<div class="container">
 <div class="container">
     <div class="toolbar" role="banner">
       <span>Lista de Grupos</span>    
@@ -22,16 +32,15 @@
                 <!-- <th>Descripcion</th>
                 <th>Tiempo</th>
                 <th>Usuario</th> -->
-                <!-- <th>Acciones</th> -->
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody class="table-group-divider" >
             <tr class="table-primary" *ngFor="let item of arregloDatosGrp">
               <td scope="row">{{item.id}} </td>
               <td>{{item.nombre}}</td>
-              <!-- <td>{{item.descripcion}}</td>
-              <td>{{item.tiempo}}</td>
-              <td>{{item.usuario}}</td> -->
+              <td><button type="button" class="btn btn-primary" (click)="eliminar(item)">Eliminar</button>
+              </td>
             </tr>
             </tbody>
             <tfoot>
