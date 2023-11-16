@@ -36,7 +36,7 @@
               </tr>
             </thead>
             <tbody class="table-group-divider" >
-            <tr class="table-primary" *ngFor="let item of arregloDatosGrp">
+            <tr class="table-primary" *ngFor="let item of arregloDatosGrp" (click)="cargaredicion(item)">
               <td scope="row">{{item.id}} </td>
               <td>{{item.nombre}}</td>
               <td><button type="button" class="btn btn-primary" (click)="eliminar(item)">Eliminar</button>

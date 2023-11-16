@@ -108,7 +108,7 @@
               </tr>
             </thead>
             <tbody class="table-group-divider" >
-            <tr class="table-primary" *ngFor="let item of arregloDatosPrs">
+            <tr class="table-primary" *ngFor="let item of arregloDatosPrs" (click)="cargaredicion(item)">
               <td scope="row">{{item.id}} </td>
               <td>{{item.cedula}}</td>
               <td>{{item.correoelectronico}}</td>
