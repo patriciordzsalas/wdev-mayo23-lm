@@ -39,9 +39,18 @@ class ListarCursos extends React.Component {
             // pintartabla(datosrespuesta.data);
         })
         .catch(console.log);//captura errores
+
+        
     }
 
-    
+    // pintartabla(){
+
+    //     this.setState({
+    //         //this.state
+    //     });
+
+    // }
+
     state = {  }
     render() { 
         const {
@@ -76,7 +85,7 @@ class ListarCursos extends React.Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="table-primary">
+                            <tr className="table-primary">
                                 <td scope="row">{this.state.id} </td>
                                 <td>{this.state.nombre}</td>
                                 <td>{this.state.descripcion}</td>
