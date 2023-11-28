@@ -10,13 +10,22 @@ class Menu extends React.Component {
             <div>
                 <ul className="nav justify-content-center  ">
                     <li className="nav-item">
-                        <a className="nav-link active" href="#" aria-current="page">Active link</a>
+                        <a className="nav-link active" href="/ListarCursos" aria-current="page">Listar Cursos</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link" href="/ListarEstudiantes">Listar Estudiantes</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link " href="#">link</a>
+                        <a className="nav-link " href="/ListarProfesores">Listar Profesores</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link " href="/ListarGrupos">Listar Grupos</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link " href="/ListarUsuarios">Listar Usuarios</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link " href="#">Chat</a>
                     </li>
                 </ul>
             </div>

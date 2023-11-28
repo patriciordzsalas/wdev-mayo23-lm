@@ -3,18 +3,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 
 
-class ListarCursos extends React.Component {
+class ListarGrupos extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             id : "",
             nombre : "",
-            descripcion : "",
-            tiempo : "",
-            usuario : "",
             url : "https://paginas-web-cr.com/ApiPHP/apis/",
-            listar : "ListaCurso.php",
+            listar : "ListaGrupo.php",
             datos : [],
             datosCargados : false
         }
@@ -55,7 +52,7 @@ class ListarCursos extends React.Component {
         return ( 
 
             <div>
-                <h1>Listar Cursos</h1>
+                <h1>Listar Grupos</h1>
                 <div className="table table-striped
                                 table-hover
                                 table-borderless
@@ -66,9 +63,6 @@ class ListarCursos extends React.Component {
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre</th>
-                                <th>Descripcion</th>
-                                <th>Tiempo</th>
-                                <th>Usuario</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -78,9 +72,6 @@ class ListarCursos extends React.Component {
                                         <tr key={datosExtraidos.id} className="table-primary">
                                             <td scope="row">{datosExtraidos.id} </td>
                                             <td>{datosExtraidos.nombre}</td>
-                                            <td>{datosExtraidos.descripcion}</td>
-                                            <td>{datosExtraidos.tiempo}</td>
-                                            <td>{datosExtraidos.usuario}</td>
                                             <td>"BotonEliminar"</td>
                                         </tr>
                                     )
@@ -103,4 +94,4 @@ class ListarCursos extends React.Component {
     }
 }
  
-export default ListarCursos;
+export default ListarGrupos;

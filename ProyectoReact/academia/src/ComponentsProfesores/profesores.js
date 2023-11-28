@@ -1,31 +1,34 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap';
 
-
-class ListarCursos extends React.Component {
+class ListarProfesores extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             id : "",
+            cedula: "",
+            correoelectronico: "",
+            telefono: "",
+            telefonocelular: "",
+            fechanacimiento: "",
+            sexo: "",
+            direccion: "",
             nombre : "",
-            descripcion : "",
-            tiempo : "",
+            apellidopaterno : "",
+            apellidomaterno : "",
+            idCarreras: "",
             usuario : "",
+            nacionalidad: "",
             url : "https://paginas-web-cr.com/ApiPHP/apis/",
-            listar : "ListaCurso.php",
+            listar : "ListaProfesores.php",
             datos : [],
             datosCargados : false
         }
-
-
     }
 
     componentDidMount(){
         this.cargardatos();
     }
-
 
     cargardatos(){
 
@@ -53,9 +56,8 @@ class ListarCursos extends React.Component {
         } = this.state;
 
         return ( 
-
             <div>
-                <h1>Listar Cursos</h1>
+                <h1>Listar Profesores</h1>
                 <div className="table table-striped
                                 table-hover
                                 table-borderless
@@ -65,10 +67,19 @@ class ListarCursos extends React.Component {
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Cedula</th>
+                                <th>Correo Electronico</th>
+                                <th>Telefono</th>
+                                <th>Telefono Celular</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Sexo</th>
+                                <th>Direccion</th>
                                 <th>Nombre</th>
-                                <th>Descripcion</th>
-                                <th>Tiempo</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Id Carreras</th>
                                 <th>Usuario</th>
+                                <th>Nacionalidad</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -77,10 +88,19 @@ class ListarCursos extends React.Component {
                                     (datosExtraidos) => (
                                         <tr key={datosExtraidos.id} className="table-primary">
                                             <td scope="row">{datosExtraidos.id} </td>
+                                            <td>{datosExtraidos.cedula}</td>
+                                            <td>{datosExtraidos.correoelectronico}</td>
+                                            <td>{datosExtraidos.telefono}</td>
+                                            <td>{datosExtraidos.telefonocelular}</td>
+                                            <td>{datosExtraidos.fechanacimiento}</td>
+                                            <td>{datosExtraidos.sexo}</td>
+                                            <td>{datosExtraidos.direccion}</td>
                                             <td>{datosExtraidos.nombre}</td>
-                                            <td>{datosExtraidos.descripcion}</td>
-                                            <td>{datosExtraidos.tiempo}</td>
+                                            <td>{datosExtraidos.apellidopaterno}</td>
+                                            <td>{datosExtraidos.apellidomaterno}</td>
+                                            <td>{datosExtraidos.idCarreras}</td>
                                             <td>{datosExtraidos.usuario}</td>
+                                            <td>{datosExtraidos.nacionalidad}</td>
                                             <td>"BotonEliminar"</td>
                                         </tr>
                                     )
@@ -88,19 +108,14 @@ class ListarCursos extends React.Component {
                                 )
                             
                             }
-  
                         </tbody>
                     </table>
                 </div>
                 
             </div>
-               
-           
-
-
+  
          );
-            
     }
 }
  
-export default ListarCursos;
+export default ListarProfesores;

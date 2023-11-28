@@ -1,30 +1,42 @@
 // import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap';
 
 
 import ListarCursos from './ComponentsCursos/index';
 import Menu from './ComponentsPlantilla/menu';
 import Dashboard from './ComponentsPlantilla/dashboard';
 
+
+import ListarEstudiantes from './ComponentsEstudiantes/estudiantes';
+import ListarProfesores from './ComponentsProfesores/profesores';
+import ListarGrupos from './ComponentsGrupos/grupos';
+import ListarUsuarios from './ComponentsUsuarios/usuarios';
+import Nuevo from './ComponentsPlantilla/nuevo';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
     <div>
       <div>
-      <Menu></Menu>
-    </div>
-    <div>
-      <ListarCursos></ListarCursos>
-    </div>
+        <Menu></Menu>
+      </div>
+      <div>
       <Router>
-        <Route exact path="/" component= {Dashboard}> </Route>
+          <Route exact path="/" component={Dashboard}></Route>
 
-        <Route path="/ListarCursos" component= {ListarCursos}> </Route>
-      </Router>
+          <Route path="/ListarCursos" component={ListarCursos}></Route>
+          <Route path="/ListarEstudiantes" component={ListarEstudiantes}></Route>
+          <Route path="/ListarProfesores" component={ListarProfesores}></Route>
+          <Route path="/ListarGrupos" component={ListarGrupos}></Route>
+          <Route path="/ListarUsuarios" component={ListarUsuarios}></Route>
+        </Router>
+      </div>
+      
+          
     </div>
+      
+     
       
   );
 }

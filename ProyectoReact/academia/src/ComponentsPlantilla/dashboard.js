@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
         return ( 
             <div className="container">
                 <Menu></Menu>
+                
             </div>
          );
     }
