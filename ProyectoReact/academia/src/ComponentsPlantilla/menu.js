@@ -27,6 +27,9 @@ class Menu extends React.Component {
                     <li className="nav-item">
                         <a className="nav-link " href="#">Chat</a>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link " href="/CrearCursos">CrearCursos</a>
+                    </li>
                 </ul>
             </div>
          );

@@ -12,8 +12,10 @@ import ListarEstudiantes from './ComponentsEstudiantes/estudiantes';
 import ListarProfesores from './ComponentsProfesores/profesores';
 import ListarGrupos from './ComponentsGrupos/grupos';
 import ListarUsuarios from './ComponentsUsuarios/usuarios';
-import Nuevo from './ComponentsPlantilla/nuevo';
+import CrearCursos from './ComponentsCursos/crear';
+
 import { Route, BrowserRouter as Router } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -30,7 +32,8 @@ function App() {
           <Route path="/ListarProfesores" component={ListarProfesores}></Route>
           <Route path="/ListarGrupos" component={ListarGrupos}></Route>
           <Route path="/ListarUsuarios" component={ListarUsuarios}></Route>
-        </Router>
+          <Route path="/CrearCursos" component={CrearCursos}></Route>
+      </Router>
       </div>
       
           
