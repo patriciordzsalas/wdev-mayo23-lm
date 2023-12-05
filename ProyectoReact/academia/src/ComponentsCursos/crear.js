@@ -25,17 +25,30 @@ class CrearCursos extends React.Component {
     }
 
     enviardatos = (e) =>{
-        alert("test")
+        e.preventDefault();
+        const {
+            nombre,
+            descripcion,
+            tiempo
+         } = this.state
+         
         var datosEnviar = {
-            state : this.state ,
-            // usuario : "Patricio Rdz"
+            nombre : nombre,
+            descripcion : descripcion,
+            tiempo : tiempo,
+            usuario : "Patricio Rdz"
         }
             
 
-        const urlcrear= this.state.url + this.state.crear;
+        var urlcrear= this.state.url + this.state.crear;
 
-        fetch(urlcrear)
-        .then(respuesta => respuesta.json(datosEnviar)) 
+        fetch(urlcrear,
+            {
+                method: 'POST',
+                body: JSON.stringify(datosEnviar)
+            }            
+            )
+        .then(respuesta => respuesta.json()) 
         .then(datosrespuesta => {
             console.log(datosrespuesta.data);
             this.setState({
